@@ -53,6 +53,20 @@ void insert(int data, int n) {   // Adding data at the nth index
 }
 
 
+void reverse(struct Node* head) {         // Reversing a linked list
+	struct Node *current, *prev, *successor;
+	current = head;
+	prev = NULL;
+	while (temp != NULL) {
+		successor = current -> next;
+		current -> next = prev;
+		prev = current;
+		current = successor;
+	}
+	head = prev;
+}
+
+
 void printList() {   // Printing the created linked list by traversal
 	struct Node* temp = head;
 	printf("The linked list is: \n");
